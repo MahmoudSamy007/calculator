@@ -6,6 +6,11 @@ let result = undefined
 document.getElementById("c").addEventListener("click", function(){
     document.getElementById("input").value = ""
     document.getElementById("display-Result").innerHTML = ""
+    firstnum = undefined
+    secondnum = undefined
+    prosecc = undefined
+    equalNum = undefined
+    result = undefined
 })
 
 document.getElementById("del").addEventListener("click", function(){

@@ -80,14 +80,15 @@ body {
     transition: background-color 0.2s, transform 0.1s;
     color: var(--text-color);
 }
-
-
 /* 6. تنسيق الأرقام والـ Dot */
 .number {
     background-color: var(--number-btn-bg);
 }
 .number:hover {
     background-color: #4a4a4a;
+}
+.number:active{
+    background-color: #2a2a2a;
 }
 
 /* 7. تنسيق العمليات */
@@ -98,6 +99,9 @@ body {
 .operator:hover {
     opacity: 0.9;
 }
+.operator:active {
+    opacity: 0.7;
+}
 
 /* 8. تنسيق الأزرار الوظيفية (C, DEL, x²) */
 .operator-func {
@@ -106,6 +110,9 @@ body {
 }
 .operator-func:hover {
     background-color: #7a7a7a;
+}
+.operator-func:active {
+    background-color: #5a5a5a;
 }
 
 /* 9. تنسيق زر يساوي */
@@ -125,4 +132,7 @@ body {
 }
 .equal-btn:hover {
     opacity: 0.9;
+}
+.equal-btn:active {
+    opacity: 0.7;
 }
