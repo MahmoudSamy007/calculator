@@ -1,0 +1,128 @@
+/* الألوان المستخدمة في الوضع الداكن */
+:root {
+    --bg-color: #121212; /* خلفية التطبيق الرئيسية */
+    --container-bg: #1e1e1e; /* خلفية جسم الآلة الحاسبة */
+    --display-bg: #2b2b2b; /* خلفية شاشة العرض */
+    --text-color: #ffffff; /* لون النص الرئيسي */
+    --number-btn-bg: #3a3a3a; /* خلفية أزرار الأرقام */
+    --operator-btn-bg: #ff9f0a; /* خلفية الأزرار البرتقالية (العمليات) */
+    --func-btn-bg: #636363; /* خلفية أزرار الوظائف (C, DEL, x²) */
+    --equal-btn-bg: #ff9f0a; /* خلفية زر يساوي */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 1. التنسيق العام للجسم */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    font-family: 'Arial', sans-serif;
+}
+
+/* 2. حاوية الآلة الحاسبة */
+#calculator-container {
+    width: 340px; /* عرض ثابت وأنيق */
+    padding: 20px;
+    background-color: var(--container-bg);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+/* 3. شاشة العرض */
+#display-area {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--display-bg);
+    border-radius: 15px;
+    text-align: right;
+    overflow: hidden;
+}
+
+#display-Result {
+    height: 30px;
+    font-size: 20px;
+    color: #a0a0a0; /* لون خفيف لعرض العمليات السابقة */
+    margin: 0;
+}
+
+#input {
+    width: 98%;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 48px;
+    text-align: right;
+    outline: none;
+    padding: 0;
+}
+
+/* 4. حاوية الأزرار باستخدام Grid */
+#btns {
+    display: grid;
+    /* 4 أعمدة متساوية في الحجم */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; /* مسافة بين الأزرار */
+}
+
+/* 5. تنسيق الأزرار الافتراضي */
+#btns button {
+    width: 100%; /* اجعل الأزرار تملأ مساحة الخلية في Grid */
+    padding: 20px 0;
+    border-radius: 20px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    color: var(--text-color);
+}
+
+
+/* 6. تنسيق الأرقام والـ Dot */
+.number {
+    background-color: var(--number-btn-bg);
+}
+.number:hover {
+    background-color: #4a4a4a;
+}
+
+/* 7. تنسيق العمليات */
+.operator {
+    background-color: var(--operator-btn-bg);
+    color: var(--text-color);
+}
+.operator:hover {
+    opacity: 0.9;
+}
+
+/* 8. تنسيق الأزرار الوظيفية (C, DEL, x²) */
+.operator-func {
+    background-color: var(--func-btn-bg);
+    color: var(--text-color);
+}
+.operator-func:hover {
+    background-color: #7a7a7a;
+}
+
+/* 9. تنسيق زر يساوي */
+.equal-btn {
+    background-color: var(--equal-btn-bg);
+    font-weight: bold;
+    color: var(--text-color);
+    /* لجعل زر يساوي يمتد على عمودين */
+    grid-column: span 2;
+}
+
+/* 10. تنسيق زر الصفر ليمتد على عمودين */
+.zero-btn {
+    grid-column: span 1;
+    text-align: center;
+    padding-left: 30px;
+}
+.equal-btn:hover {
+    opacity: 0.9;
+}
