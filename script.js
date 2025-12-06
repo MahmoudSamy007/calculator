@@ -128,3 +128,6 @@ document.getElementById("sqr").addEventListener("click", function(){
 })
 
 
+document.getElementById("theme-btn").addEventListener("click", function(){
+    document.documentElement.classList.toggle('light-mode')
+})
